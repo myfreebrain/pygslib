@@ -1,0 +1,54 @@
+[build-system]
+requires = [
+    "meson-python>=0.13.0",
+    "cython>=0.29.21",
+    "numpy>=0.19",
+    "setuptools>=61.0",
+    "wheel>=0.36.2"
+]
+build-backend = "mesonpy"
+
+[project]
+name = "pygslib"
+version = "0.0.0.0.9"  # Assuming version is defined in pygslib/version.py
+description = "Python module for mineral resource estimation and geostatistics"
+readme = "README.md"
+authors = [
+    { name = "Adrian Martinez Vargas", email = "adriangeologo@yahoo.es" }
+]
+license = { text = "GPL and MIT" }
+classifiers = [
+    "Development Status :: 7 - Alpha",
+    "Programming Language :: Python",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License and GPL",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: GIS"
+]
+keywords = ["geostatistics", "kriging", "variogram", "estimation", "simulation", "blockmodel", "drillhole", "wireframe"]
+requires-python = ">=3.6"
+dependencies = [
+    "ipython",
+    "matplotlib",
+    "jupyter",
+    "vtk>=8.0",
+    "bokeh",
+    "colour",
+    "numpy>=0.19",
+    "scipy",
+    "pandas"
+]
+
+[project.urls]
+Homepage = "https://github.com/opengeostat/pygslib"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pygslib*"]
+
+[tool.setuptools.package-data]
+pygslib = ["data/*.*"]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules -v"
+testpaths = ["tests"]
