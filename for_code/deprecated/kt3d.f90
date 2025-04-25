@@ -367,7 +367,7 @@ subroutine kt3d( &
     real*8, intent(inout) :: skmean
 
     ! drift 
-    integer, intent(in), dimension (9) :: idrift
+    integer, intent(inout), dimension (9) :: idrift
 
     ! variogram
     integer, intent(in) :: nst
@@ -918,7 +918,7 @@ subroutine kt3d_getmatrix_size ( &
     integer, intent(in) :: ktype
 
     ! drift 
-    integer, intent(in), dimension (9) :: idrift
+    integer, intent(inout), dimension (9) :: idrift
     
     ! data
     integer, intent(in) :: na

@@ -120,10 +120,10 @@ subroutine pykt3d( nd, x,y,z,vr,ve, bhidint, &                                  
     integer, intent(in) :: ndmax,ndmin
     integer, intent(in), optional ::noct,nbhid
 
-    integer, intent(in), dimension (MAXDT), optional  :: idrif          ! drift terms (external)
+    integer, intent(inout), dimension (MAXDT), optional  :: idrif          ! drift terms (external)
 
     integer, intent(in), optional :: itrend,ktype,koption               ! kriging options
-    real, intent(in), optional :: skmean
+    real, intent(inout), optional :: skmean
 
     integer, intent(in), optional ::  iktype                       ! especial parameters for indicator krigimg  iktype =1
     integer, intent(in) :: ncut
