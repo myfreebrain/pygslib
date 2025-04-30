@@ -3,7 +3,7 @@ project('pygslib', 'c', 'cpp', 'fortran', 'cython',
   meson_version : '>= 1.2.0',
   default_options: ['cpp_std=c++11', 'buildtype=release', 'warning_level=1','python.allow_limited_api=false'])
   
-python = import('python').find_installation()
+python = import('python').find_installation('python3',pure: false)
 
 #py = import('python').find_installation('python3',pure: false)
 py_dep = python.dependency()
