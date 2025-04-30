@@ -69,6 +69,7 @@ foreach mod : fortran_modules
     sources : mod_sources,
     dependencies : numpy_dep,
     install : true,
+    subdir: 'gslib'
     fortran_args : ['-O3'])
 endforeach
 
@@ -102,6 +103,7 @@ foreach cy_mod : cython_modules
     include_directories: [numpy_inc],	
     dependencies : [py_dep, numpy_dep],
     install : true,
+    #subdir: 'pygslib'
     cpp_args : ['-O3'])
 endforeach
 
