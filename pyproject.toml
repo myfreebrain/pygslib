@@ -1,35 +1,23 @@
 [build-system]
 requires = [
-    "meson-python>=0.17.1",
-    "meson>=1.7.2",    
-    "ninja>=1.11.1.4",
-    "cython>=3.0.12",
-    "numpy>=2.2.5",
-    "setuptools>=79.0.1",
-    "wheel>=0.45.1"
+    "meson-python",
+    "setuptools",
+    "wheel",
+    "numpy",
+    "cython"
 ]
-
 build-backend = "mesonpy"
 
 [project]
 name = "pygslib"
-#version = "0.0.0.7.1.1"  # Assuming version is defined in pygslib/version.py
-dynamic = ["version"] # Tells build tools version is dynamic
+version = "0.0.0.7.1.1"  
 description = "Python module for mineral resource estimation and geostatistics"
-readme = "README.md"
 authors = [
     { name = "Adrian Martinez Vargas", email = "adriangeologo@yahoo.es" }
 ]
-license = { text = "GPL and MIT" }
-classifiers = [
-    "Development Status :: 7 - Alpha",
-    "Programming Language :: Python",
-    "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License and GPL",
-    "Topic :: Scientific/Engineering :: Mathematics",
-    "Topic :: Scientific/Engineering :: GIS"
-]
-keywords = ["geostatistics", "kriging", "variogram", "estimation", "simulation", "blockmodel", "drillhole", "wireframe"]
+
+readme = "README.md"
+license = { text = "MIT and GPL" }
 requires-python = ">=3.10"
 dependencies = [
     "ipython",
@@ -45,23 +33,3 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/opengeostat/pygslib"
-Repository = "https://github.com/opengeostat/pygslib"
-
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["pygslib*"]
-
-[tool.setuptools.package-data]
-pygslib = ["data/*.*"]
-
-[tool.pytest.ini_options]
-addopts = "--doctest-modules -v"
-testpaths = ["tests"]
-
-[project.optional-dependencies]
-test = [
-    "pytest",
-]
-
-#[tool.meson-python.dynamic_version]
-#file = "pygslib/version.py"
