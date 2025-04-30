@@ -75,7 +75,7 @@ foreach mod : fortran_modules
     dependencies : [py_dep, f2py_dep],
     install : true,
     subdir: 'pygslib/gslib',
-    f2py_options: mod_options，
+    #f2py_options: mod_options，
     fortran_args : ['-O3'])
 endforeach
 
