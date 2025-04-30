@@ -109,9 +109,9 @@ endforeach
 
 # Pure Python files (no compilation needed)
 
-#install_subdir('pygslib', exclude_directories : ['__pycache__'])
-install_subdir('pygslib', install_dir : python.get_install_dir(), exclude_directories : ['__pycache__'])
+install_subdir('pygslib', install_dir : '', exclude_directories : ['__pycache__'])
+#install_subdir('pygslib', install_dir : python.get_install_dir(), exclude_directories : ['__pycache__'])
 
 
 # Data files
-install_data('README.md')
+#install_data('README.md')
