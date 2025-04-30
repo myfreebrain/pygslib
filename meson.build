@@ -29,7 +29,7 @@ pygslib_sources = []
 
 # Fortran modules
 fortran_modules = [
-  ['__gslib__kt3d', ['for_code/kt3d/kt3d.f90',
+  ['gslib__kt3d', ['for_code/kt3d/kt3d.f90',
                                    'for_code/kt3d/gslib/setrot.f90',
                                    'for_code/kt3d/gslib/getindx.f90',
                                    'for_code/kt3d/gslib/picksupr.f90',
@@ -40,7 +40,7 @@ fortran_modules = [
                                    'for_code/kt3d/gslib/sortem.f90',
                                    'for_code/kt3d/gslib/srchsupr.f90']],
 
-  ['__gslib__postik', ['for_code/postik/postik.f90',
+  ['gslib__postik', ['for_code/postik/postik.f90',
                                      'for_code/postik/gslib/beyond.f90',
                                      'for_code/postik/gslib/locate.f90',
                                      'for_code/postik/gslib/powint.f90',
